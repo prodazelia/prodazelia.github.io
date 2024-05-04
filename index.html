@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZELIA</title>
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .background-gif {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1;
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.1); 
+        }
+
+        .content:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 0px;
+            margin-top: 0; 
+        }
+
+        p {
+            font-size: 24px;
+            margin-bottom: 0; 
+        }
+
+        .soundcloud {
+            position: absolute;
+            top: calc(50% + 400px);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            width: 400px;
+            height: 150px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+        }
+
+
+        .content, h1, p {
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-gif" id="background-gif"></div>
+    
+    <div class="content" onclick="window.open('https://soundcloud.com/prodazelia', '_blank');">
+        <h1>AZELIA</h1>
+    </div>
+    <script>
+
+        const gifUrl = 'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXNuYW5ubmtxNnJnbXRtdGQ2eTV5NzFjZ2ZrNjk0MXUydGFhczR3NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pOhqA8rf4IwuDoM0QI/giphy.gif';
+
+        document.getElementById('background-gif').style.backgroundImage = `url('${gifUrl}')`;
+    </script>
+</body>
+</html>
